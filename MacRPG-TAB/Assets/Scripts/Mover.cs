@@ -12,10 +12,12 @@ public class Mover : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {       
             MoveToCurser();
         }
+
+        UpdateAnimator();
     }
     private void MoveToCurser()
     {
@@ -29,7 +31,15 @@ public class Mover : MonoBehaviour
             
         }
     }
-        
+
+   private void UpdateAnimator()
+   {
+        Vector3 velocity = GetComponent<NavMeshAgent>().velocity;
+        Vector3 localVelocity = transform.InverseTransformDirection(velocity);
+
+        float speed = localVelocity.z;
+        GetComponent<Animator>().SetFloat("ForwardSpeed", speed);
+   }    
 
 }
 
