@@ -6,20 +6,13 @@ namespace RPG.Combat
 {
     public class Fighter : MonoBehaviour
     {
-
-        void Start()
+        public void Attack(CombatTarget target)
         {
-            
+            print("Attacking");
         }
 
-        void Update()
-        {
-            
-        }
-
-        public void Attack()
-        {
-            print("Attack");
-        }
     }
+
+
 }
+
