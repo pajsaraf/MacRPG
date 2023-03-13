@@ -10,21 +10,15 @@ namespace RPG.Control
     public class PlayerController : MonoBehaviour
     {
         
-        void Update()
+        private void Update()
         {
-            InteractWithMovement();
-            InteractWithCombat();
+            if (InteractWithCombat()) return;
+            if (InteractWithMovement()); return;
+           // print("cant move");   //outside navmesh - edge of world
         }
 
-        private void InteractWithMovement()
-        {
-            if (Input.GetMouseButton(0))
-            {
-                MoveToCurser();
-            }
-        }
 
-        private void InteractWithCombat()
+        private bool InteractWithCombat()
         {
             RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
             foreach (RaycastHit hit in hits)
@@ -36,22 +30,25 @@ namespace RPG.Control
                 {
                     GetComponent<Fighter>().Attack(target);
                 }
-
-
+                return true;
             }
+            return false; 
         }
 
-        private void MoveToCurser()
+        private bool InteractWithMovement()
         {
-            //Ray ray = GetMouseRay();
             RaycastHit hit;
             bool hasHit = Physics.Raycast(GetMouseRay(), out hit);
-
             if (hasHit)
             {
-                GetComponent<Mover>().MoveTo(hit.point);
+                if (Input.GetMouseButton(0))
+                {
+                    GetComponent<Mover>().MoveTo(hit.point);
+                    print("Kiss me i move");
+                }
+                return true;
             }
-    
+            return false;
         }
 
         private static Ray GetMouseRay()
