@@ -14,7 +14,7 @@ namespace RPG.Control
         {
             if (InteractWithCombat()) return;
             if (InteractWithMovement()); return;
-           // print("cant move");   //outside navmesh - edge of world
+           print("cant move");   //outside navmesh - edge of world
         }
 
 
