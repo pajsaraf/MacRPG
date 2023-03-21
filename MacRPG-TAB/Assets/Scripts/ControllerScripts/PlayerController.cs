@@ -13,8 +13,8 @@ namespace RPG.Control
         private void Update()
         {
             if (InteractWithCombat()) return;
-            if (InteractWithMovement()); return;
-           print("cant move");   //outside navmesh - edge of world
+            if (InteractWithMovement()) return;
+            //print("cant move");   //outside navmesh - edge of world
         }
 
 
@@ -44,7 +44,7 @@ namespace RPG.Control
                 if (Input.GetMouseButton(0))
                 {
                     GetComponent<Mover>().StartMoveAction(hit.point);
-                    print("Kiss me i move");
+                    //print("Kiss me i move");
                 }
                 return true;
             }

@@ -774,6 +774,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7133863778267336464, guid: c21f65ac96d304b42932cc9e76c6b3a2, type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7840024659128362882, guid: c21f65ac96d304b42932cc9e76c6b3a2, type: 3}
       propertyPath: m_RootOrder
       value: 4
