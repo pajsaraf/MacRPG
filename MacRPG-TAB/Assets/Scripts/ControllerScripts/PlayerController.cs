@@ -24,7 +24,10 @@ namespace RPG.Control
             foreach (RaycastHit hit in hits)
             {
                 CombatTarget target = hit.transform.GetComponent<CombatTarget>();
-                if (target == null) continue;
+                if(!GetComponent<Fighter>().CanAttack(target)) //if we cant attack then...
+                {
+                    continue; // continue in for each loop
+                }
 
                 if(Input.GetMouseButtonDown(0))
                 {

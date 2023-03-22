@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: health
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: -2258985174395103874, guid: c21f65ac96d304b42932cc9e76c6b3a2, type: 3}
+      propertyPath: healthPoints
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7133863778267336464, guid: c21f65ac96d304b42932cc9e76c6b3a2, type: 3}
       propertyPath: weaponDamage
       value: 5
@@ -70,18 +74,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8387538448380668656, guid: c21f65ac96d304b42932cc9e76c6b3a2, type: 3}
   m_PrefabInstance: {fileID: 6863631430651983518}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2230145203667997119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3109174432445144174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094d53f3951bc48c897edd74c4873404, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &275895177406526851
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -96,6 +88,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2230145203667997119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3109174432445144174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094d53f3951bc48c897edd74c4873404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3714863348032049436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7840024659128362882, guid: c21f65ac96d304b42932cc9e76c6b3a2, type: 3}
