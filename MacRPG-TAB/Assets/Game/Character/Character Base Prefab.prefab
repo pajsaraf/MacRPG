@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 7133863778267336464}
   - component: {fileID: 6246490748279217418}
   - component: {fileID: -2258985174395103874}
+  - component: {fileID: 275895177406526851}
+  - component: {fileID: 2230145203667997119}
   m_Layer: 0
   m_Name: Character Base Prefab
   m_TagString: Untagged
@@ -149,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponRange: 2
   timeBetweenAttacks: 1
-  weaponDamage: 25
+  weaponDamage: 5
 --- !u!114 &6246490748279217418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,4 +176,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06e2439f92f06497a8b530745346fea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  healthPoints: 30
+--- !u!136 &275895177406526851
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8387538448380668656}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2230145203667997119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8387538448380668656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094d53f3951bc48c897edd74c4873404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
