@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using RPG.Core;
 
+
 namespace RPG.Movement
 {
     public class Mover : MonoBehaviour, IAction
@@ -11,15 +12,18 @@ namespace RPG.Movement
 
     [SerializeField] Transform target;
     NavMeshAgent navMeshAgent;
+    Health health;
 
 
         private void Start()
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
+            health = GetComponent<Health>();
         }
 
         private void Update()
         {
+            navMeshAgent.enabled = !health.IsDead(); //disables nav mesh agent when things die so you can walk over them
             UpdateAnimator();
         }
 

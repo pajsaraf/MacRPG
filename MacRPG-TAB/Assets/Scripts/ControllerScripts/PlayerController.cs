@@ -3,15 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Combat;
+using RPG.Core;
 
 
 namespace RPG.Control 
 {
     public class PlayerController : MonoBehaviour
     {
-        
+        Health health;
+
+        private void Start() 
+        {
+            health = GetComponent<Health>();
+        }
+
         private void Update()
         {
+            if (health.IsDead())  //if its dead then do no ray casting and so no move or attack
+            {
+                return;
+            }
+
             if (InteractWithCombat()) return;
             if (InteractWithMovement()) return;
             //print("cant move");   //outside navmesh - edge of world
