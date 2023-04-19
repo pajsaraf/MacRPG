@@ -12,6 +12,8 @@ namespace RPG.Combat
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float weaponDamage = 25f;
+        [SerializeField] float GuillaumeTest = 1f;
+        
         Health target;
         float timeSinceLastAttack = Mathf.Infinity;  // last attack will always be true - so even at spawn i can attack right away
 
