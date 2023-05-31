@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Sandbox test/SandboxTest.unity
+- path: Assets/Scenes/Sandbox test/Hamlet Village.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
